@@ -1,0 +1,25 @@
+<h1>Google Parking</h1>
+<div id="map-container">
+  <div id="map-canvas"></div>
+</div>
+<table id="base_cord" class="table">
+  <thead><h3>Add parking spot (minimum 2 cordinates)</h3></thead>
+  <tr>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>Actions</th>
+  </tr>
+  <tr>
+    <td><%= text_field_tag 'lat_first', '', onkeypress: 'return isNumberKey(event)' %></td>
+    <td><%= text_field_tag 'lng_first', '', onkeypress: 'return isNumberKey(event)' %></td>
+  </tr>
+  <tr>
+    <td><%= text_field_tag 'lat_second', '', onkeypress: 'return isNumberKey(event)' %></td>
+    <td><%= text_field_tag 'lng_second', '', onkeypress: 'return isNumberKey(event)' %></td>
+  </tr>
+</table>
+<table id="add_cord" class="table">
+</table>
+<%= button_tag 'Add dot to polygon', class: 'btn btn-success', id: 'add_dot' %>
+<%= button_tag 'Create parking spot', class: 'btn btn-primary', id: 'create_ps' %>
+<br><br>
